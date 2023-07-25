@@ -1,14 +1,18 @@
 print('Bem-vindo ao banho e tosa do Douglas Peixoto Tardioli')
+'''
+Programa para calculo de preço Banho e tosa
+cachorro
+'''
 
 preso = 0
 multiplicador = 0
 
-def pesoCachorro():
-  
+
+def pesoCachorro(): #Função de Peso do Cachorro
   while True:
           try:
             peso = int(input('Qual o peso do cachorro (kg): '))
-            if peso < 3:
+            if peso < 3: 
                 preso = 40
                 return preso
             elif peso >= 3 and peso < 10:
@@ -25,9 +29,9 @@ def pesoCachorro():
           except ValueError:
               print('Você digitou um valor não numerico \n' +
                     'Por favor, entre com o peso do cachorro novamente')
-              
+            
 
-def peloCachorro():
+def peloCachorro(): #Função para escolha de Peso do cachorro
   while True:
       pelo_cachorro = input('Qual o Pelo do cachorro \n' + 
                             'c - Pelo Curto\n' +
@@ -47,7 +51,9 @@ def peloCachorro():
       else:
           print('Digite uma das opções acima.')
 
-def servicoExtra():
+
+
+def servicoExtra(): #Função para escolher se deseja algum serviço extra
     accum = 0
     while True:
       extra = input('Deseja adicionar mais algum serviço: \n' + 
@@ -70,14 +76,19 @@ def servicoExtra():
       else:
           print('Digite uma das opções acima.')
 
-
+#variáveis de armazenamento
 peso_cachorro =  pesoCachorro()
+print('-' * 50) #espaço entre perguntas    
 pelo_cachorro =  peloCachorro()
+print('-' * 50) #espaço entre perguntas    
 servico_extra = servicoExtra()
+print('-' * 50) #espaço entre perguntas 
 
 
-total = (peso_cachorro * pelo_cachorro) + servico_extra
-print(f'Total a pagar: R${total:.2f} (peso: R${peso_cachorro:.2f} * pelo: R${pelo_cachorro:.2f} + Serviço(s) extra: R${servico_extra:.2f})')     
+total = (peso_cachorro * pelo_cachorro) + servico_extra #total que a pessoa deverá pagar
+#print resultado com total e calculos para o total
+print(f'Total a pagar: R${total:.2f}\n' + 
+      f'(peso: R${peso_cachorro:.2f} * pelo: R${pelo_cachorro:.2f} + Serviço(s) extra: R${servico_extra:.2f})')     
 
 
 
