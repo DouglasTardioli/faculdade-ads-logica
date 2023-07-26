@@ -1,12 +1,7 @@
 print('Bem-vindo ao banho e tosa do Douglas Peixoto Tardioli')
-'''
-Programa para calculo de preço Banho e tosa
-cachorro
-'''
 
 preso = 0
 multiplicador = 0
-
 
 def pesoCachorro(): #Função de Peso do Cachorro
   while True:
@@ -33,7 +28,7 @@ def pesoCachorro(): #Função de Peso do Cachorro
 
 def peloCachorro(): #Função para escolha de Peso do cachorro
   while True:
-      pelo_cachorro = input('Qual o Pelo do cachorro \n' + 
+      pelo_cachorro = input('Qual o Pelo do cachorro \n' + #menu para escolha do pelo
                             'c - Pelo Curto\n' +
                             'm = Pelo Médio\n' +
                             'l = Pelo Longo\n' +
@@ -56,7 +51,7 @@ def peloCachorro(): #Função para escolha de Peso do cachorro
 def servicoExtra(): #Função para escolher se deseja algum serviço extra
     accum = 0
     while True:
-      extra = input('Deseja adicionar mais algum serviço: \n' + 
+      extra = input('Deseja adicionar mais algum serviço: \n' + #menu para a escolha de serviços extras
                             '0 - Não, desejo finalizar.\n' +
                             '1 - Cortes de unhas - R$10,00\n' +
                             '2 - Escovar Dentes - R$12,00\n' +
@@ -89,7 +84,6 @@ total = (peso_cachorro * pelo_cachorro) + servico_extra #total que a pessoa deve
 #print resultado com total e calculos para o total
 print(f'Total a pagar: R${total:.2f}\n' + 
       f'(peso: R${peso_cachorro:.2f} * pelo: R${pelo_cachorro:.2f} + Serviço(s) extra: R${servico_extra:.2f})')     
-
 
 
 
